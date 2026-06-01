@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Mock Survey Form</h1>
+        <p id="description">This is a survey form created for the HTML certificate 
+            lab test of <strong>FreeCodeCamp</strong>.As such,most id,name,for etc.
+            attributess' values have been used as the ones given in that test. No
+            CSS has been used,only pure HTML.</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <input id="name" type="text" required placeholder="Enter your name"><br>
+            <label for="email" id="email-label">Email</label>
+            <input id="email" type="email" required placeholder="example@gmail.com"><br>
+            <label for="number" id="number-label">Age(Optional)</label>
+            <input id="number" type="number" placeholder="age" 
+            min="6" max="100"><br><br>
+            <label for="dropdown">Cheer me up!</label>
+            <select id="dropdown">
+                <option>Nice</option>
+                <option>Okay</option>
+                <option>Whatever</option>
+                <option>Boohoo</option>
+                <option>You Suck</option>
+            </select><br><br>
+            <p>Would you like to be my friend?</p>
+            <input name="name" id="yes" type="radio" value="yes">
+            <label for="yes">Yes</label>
+            <input name="name" id="no" type="radio" value="no">
+            <label for="no">No</label>
+            <p>Common interests(can be multiple,I'd like that)</p>
+            <input id="coding" type="checkbox" value="coding" checked>
+            <label for="coding">Coding</label>
+            <input id="books" type="checkbox" value="books">
+            <label for="books">Books</label>
+            <input id="games" type="checkbox" value="games">
+            <label for="games">Games</label>
+            <input id="movies" type="checkbox" value="movies">
+            <label for="movies">Movies</label>
+            <input id="anime" type="checkbox" value="anime">
+            <label for="anime">Anime</label>
+            <input id="music" type="checkbox" value="music">
+            <label for="music">Music</label>
+            <input id="basketball" type="checkbox" value="basketball">
+            <label for="basketball">Basketball</label>
+            <input id="tennis" type="checkbox" value="tennis">
+            <label for="tennis">Tennis</label>
+            <input id="physics" type="checkbox" value="physics">
+            <label for="physics">Physics</label><br><br>
+            <p>Any queries?</p>
+            <textarea rows="4" cols="20" placeholder="Enter your query here"></textarea><br>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
