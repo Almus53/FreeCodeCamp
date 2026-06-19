@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Card</title>
+    <style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }    
+    body {
+        display: flex;
+        padding: 50px;
+        align-items: center;
+        justify-content: center;
+        background: fixed no-repeat linear-gradient(45deg, red,blue,green);
+    }
+    .blog-post-card {
+        display: flex;
+        flex-direction: column;
+        width:500px;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        gap: 10px;
+        overflow: hidden;
+    }    
+    .post-img {
+        width: 100%;
+        border-bottom: 5px red solid;
+    }
+    .post-content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .post-title {
+        color: maroon;
+        margin: 5px;
+    }
+    .post-excerpt {
+        color: darkred;
+        margin: 10px;
+    }
+    .read-more {
+        color: white;
+        background-color: black;
+        margin: 5px;
+        padding: 10px 10px;
+        max-width: 200px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: color 300ms, background-color 300ms;
+    }
+    .read-more:hover {
+        background-color: rgb(255, 0, 0);
+    }
+    </style>
+</head>
+<body>
+  <div class="blog-post-card">
+    <img class="post-img" src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg" alt="post image">
+    <div class="post-content">
+        <h2 class="post-title">Learn Web Development in 2026</h2>
+        <p class="post-excerpt">Stay ahead of the curve with the latest trends in web development. Discover what's new and exciting in 2026</p>
+        <a class="read-more">Read More</a>
+    </div>    
+  </div>  
+</body>
+</html>

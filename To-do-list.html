@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            line-height: 2;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            gap: 30px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(53, 53, 53, 0.215);
+            border-radius: 10px;
+
+        }
+        .sub-item {
+            list-style: inside square;
+            padding-left: 20px;
+        }
+        .todo-list > li {
+            list-style: inside none;
+            padding: 5px 20px;
+            background-color: rgb(234, 255, 216);
+            padding: 20px 80px;
+            width: 60%;
+            max-width: 400px;
+            border-radius: 10px;
+            white-space: nowrap;
+            margin: 20px 0px;
+        }
+        .sub-item-link:link {
+            color: Blue;
+            text-decoration: none;
+        }
+        .sub-item-link:visited {
+            color: violet;
+        }
+        .sub-item-link:hover {
+            color: red;
+        }
+        .sub-item-link:active {
+            color: aliceblue;
+        }
+        .sub-item-link:focus {
+            outline: 1px;
+        }
+        label {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My To-Do List</h1>
+        <ul class="todo-list">
+                <li>
+                    <input type="checkbox" id="first">
+                    <label for="first">Explore gaming keyboards</label>
+                    <ul class="sub-item">
+                        <li><a class="sub-item-link" href="To-do-list.html" target="_blank">Store link</a></li>
+                    </ul>
+                </li> 
+                <li>
+                    <input type="checkbox" id="second">
+                <label for="second">Finish the Report</label>
+                <ul class="sub-item">
+                    <li><a class="sub-item-link" href="To-do-list.html" target="_blank">Request Access</a></li>
+                </ul>
+                    
+                </li>
+                <li>
+                    <input type="checkbox" id="third">
+                <label for="third">View Phone's Warranty</label>
+                <ul class="sub-item">
+                    <li><a class="sub-item-link" href="To-do-list.html" target="_blank">View Receipts</a></li></li>
+                </ul>
+                    
+                <li>
+                    <input type="checkbox" id="fourth">
+                <label for="fourth">Check Processor Specs</label>
+                <ul class="sub-item">
+                    <li><a class="sub-item-link" href="To-do-list.html" target="_blank">View Model Number</a></li></li>
+                </ul>
+        </ul>
+    </main>
+</body>
+</html>

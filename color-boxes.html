@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 700px;
+            margin: 100px auto;
+        }
+        .color-grid {
+            display: flex;
+            gap: 40px;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .color1 {
+            background-color: #0F0;
+        }
+        .color2 {
+            background-color: rgb(127, 0, 255);
+        }
+        .color3 {
+            background-color: orange;
+        }
+        .color4 {
+            background-color: hsl(60, 10%, 30%);
+        }
+        .color5 {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Box</h1>
+    <div class="color-grid">
+        <div class="color-box color1"></div>
+        <div class="color-box color2"></div>
+        <div class="color-box color3"></div>
+        <div class="color-box color4"></div>
+        <div class="color-box color5"></div>
+    </div>
+</body>
+</html>
