@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;    
+        }
+        body {
+            background-color: pink;
+        }
+        #playing-cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            height: 350px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .left,.middle,.right {
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+            font-weight: bold;
+            align-items: center;
+        }
+        .left {
+            align-self: flex-start;
+        }
+        .middle {
+            font-size: 70px;
+            align-self: center;
+        }
+        .right {
+            transform: rotate(180deg);
+            align-self: flex-end;
+        }
+        .middle span {
+            align-self: center;
+        }
+        .invert {
+            transform: rotate(180deg);
+        }
+        .red {
+            color: red;
+        }
+        .five {
+            display: flex;
+            flex-direction: row;
+        }
+        .five div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .two {
+            display: flex;
+            gap: 42px;        
+        }
+    </style>
+</head>
+<body>
+    <main id="playing-cards">
+        <div class="card">
+            <div class="left"><span>A</span>♣</div>
+            <div class="middle">♣</div>
+            <div class="right"><span>A</span>♣</div>
+        </div>
+        <div class="card">
+            <div class="left"><span>2</span>♣</div>
+            <div class="middle">♣<span class="invert">♣</span></div>
+            <div class="right"><span>2</span>♣</div>
+        </div>
+        <div class="card">
+            <div class="left"><span>5</span>♣</div>
+            <div class="middle">♣♣<span>♣</span><span class="invert">♣♣</div>
+            <div class="right"><span>5</span>♣</div>
+        </div>
+        <div class="card">
+            <div class="left"><span>A</span>♠</div>
+            <div class="middle">♠</div>
+            <div class="right"><span>A</span>♠</div>
+        </div>
+        <div class="card">
+            <div class="left"><span>2</span>♠</div>
+            <div class="middle">♠<span class="invert">♠</span></div>
+            <div class="right"><span>2</span>♠</div>
+        </div>
+        <div class="card red">
+            <div class="left"><span>7</span>♥</div>
+            <div class="middle">
+                <div class="five">
+                    <div><span>♥</span><span>♥</span></div>
+                    <div>♥</div>
+                    <div><span>♥</span><span>♥</span></div>
+                </div>
+                <div class="two">
+                    <div>♥</div>
+                    <div>♥</div>
+                </div>
+            </div>
+            <div class="right"><span>7</span>♥</div>
+        </div>
+        <div class="card red">
+            <div class="left"><span>3</span>♦</div>
+            <div class="middle">♦<span>♦</span><span>♦</span></div>
+            <div class="right"><span>10</span>♦</div>
+        </div>
+        <div class="card red">
+            <div class="left"><span>10</span>♦</div>
+            <div class="middle">
+                <div class="five">
+                    <div><span>♦</span><span>♦</span></div>
+                    <div>♦</div>
+                    <div><span>♦</span><span>♦</span></div>
+                </div>
+                <div class="five">
+                    <div><span>♦</span><span>♦</span></div>
+                    <div>♦</div>
+                    <div><span>♦</span><span>♦</span></div>
+                </div>
+            </div>
+            <div class="right"><span>10</span>♦</div>
+        </div>
+    </main>
+</body>
+</html>
