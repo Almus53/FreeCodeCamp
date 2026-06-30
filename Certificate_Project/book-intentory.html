@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 100px auto;
+            gap: 10px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            background-color: aliceblue;
+        }
+        table {
+             border-collapse: collapse;
+        }
+        td, th {
+             text-align: center;
+        }
+        thead tr {
+            background-image: linear-gradient(rgb(178, 255, 255) 2px,rgb(35, 215, 235) 80%);
+            color: black;
+        }
+        thead th {
+            padding: 5px 10px;
+        }
+        tr[class="read"] {
+            background-image: linear-gradient(rgb(165, 253, 171) 2px,rgb(142, 255, 155) 80%);
+            color: black;
+        }
+        tr[class="to-read"] {
+            background-image: linear-gradient(rgb(211, 211, 211) 2px,rgb(252, 251, 251) 80%);
+            color: black;
+        }
+        tr[class="in-progress"] {
+            background-image: linear-gradient(rgb(255, 249, 182) 2px,rgb(255, 253, 142) 80%);
+            color: black;
+        }
+        span {
+            display: inline-block;
+            text-align: center;
+        }
+        tr[class="to-read"] span[class="status"] {
+            border: 2px solid red;
+            background-image: radial-gradient(circle,red 20%, rgb(255, 123, 123) 90%) ;
+            border-radius: 20px;
+            color: rgb(22, 22, 22);
+            font-weight: 100;
+        }
+        tr[class="read"] span[class="status"] {
+            border: 2px solid green;
+            background-image: radial-gradient(circle,rgb(103, 236, 105) 20%, rgb(186, 255, 180) 90%) ;
+            border-radius: 20px;
+            color: rgb(22, 22, 22);
+            font-weight: 100;
+        }
+        tr[class="in-progress"] span[class="status"] {
+            border: 2px solid gold;
+            background-image: radial-gradient(circle,rgb(240, 234, 63) 20%, rgb(251, 255, 180) 90%) ;
+            border-radius: 20px;
+            color: rgb(22, 22, 22);
+            font-weight: 100;
+        }
+        span[class="status"], span[class^="rate"] {
+            width: 100px;
+            height: 30px;
+            padding: 5px;
+        }
+        span[class^="rate"] > span {
+           border: 1px solid black;
+           height: 20px;
+           width: 20px;  
+           margin: 2px;
+           background-color: rgb(255, 138, 138);
+           border-radius: 50%;
+        }
+        span[class~="one"] > :first-child {
+            background-image: linear-gradient(rgb(25, 189, 25) 10%, rgb(34, 143, 34) 70%);
+        }
+        span[class~="two"] > :first-child,
+        span[class~="two"] > :nth-child(2) {
+            background-image: linear-gradient(rgb(25, 189, 25) 10%, rgb(34, 143, 34) 70%);
+        }
+        span[class~="three"] span {
+            background-image: linear-gradient(rgb(25, 189, 25) 10%, rgb(34, 143, 34) 70%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Book Inventory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <tr class="read">
+                <td>The Universe in the Rearview Mirror</td>
+                <td>David Goldberg</td>
+                <td>Science Non-fiction</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate three">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span></td>
+            </tr>
+            <tr class="read">
+                <td>The Three Musketeers</td>
+                <td>Alexandre Dumas</td>
+                <td>Historical Novel</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate two">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span></td>
+            </tr>
+            <tr class="read">
+                <td>Dead Souls</td>
+                <td>Nikolai Gogol</td>
+                <td>Picaresque</td>
+                <td><span class="status">Read</span></td>
+                <td><span class="rate one">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span></td>
+            </tr>
+            <tr class="to-read">
+                <td>Lord of the Flies</td>
+                <td>William Golding</td>
+                <td>Allegorical Novel</td>
+                <td><span class="status">To Read</span></td>
+                <td><span class="rate">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span></td>
+            </tr>
+            <tr class="in-progress">
+                <td>Do Androids Dream of Electric Sheep?</td>
+                <td>Philip K. Dick</td>
+                <td>Science Fiction</td>
+                <td><span class="status">In Progress</span></td>
+                <td><span class="rate">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span></td>
+            </tr>
+        </tbody>    
+    </table>
+    </main>
+</body>
+</html>
